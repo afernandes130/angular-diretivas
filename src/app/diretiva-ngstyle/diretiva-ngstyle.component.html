@@ -1,0 +1,25 @@
+<p>diretiva-ngstyle works!</p>
+
+<input type="text" [(ngModel)]="textsize">
+<br>
+<br>
+<br>
+<p>Style binding</p>
+<button
+    [style.backgroundColor]= "ativo ? 'blue' : 'gray'"
+    [style.color]="ativo ? 'white' : 'black'"
+    [style.fontWeight]="'bold'"
+    [style.fontSize] = " textsize + 'px'"
+    (click) = "isenabled()"
+    
+>
+    Click aqui 1
+</button>
+
+<br>
+<br>
+<br>
+<p>Ngstyle</p>
+<button class="btn btn-primary">
+    Click aqui 1
+</button>

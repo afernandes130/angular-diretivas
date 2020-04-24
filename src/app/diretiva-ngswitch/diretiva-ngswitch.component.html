@@ -1,0 +1,21 @@
+<nav class="nav navbar-dark bg-dark nav-pills flex-column flex-sm-row">
+    <a class="flex-sm-fill text-sm-center nav-link" [class.active]="tabselected == 'home'" (click)="tabselected='home'" href="#">Home</a>
+    <a class="flex-sm-fill text-sm-center nav-link" [class.active]="tabselected == 'features'" (click)="tabselected='features'" href="#">Features</a>
+    <a class="flex-sm-fill text-sm-center nav-link" [class.active]="tabselected == 'pricing'" (click)="tabselected='pricing'" href="#">Pricing</a>
+    <a class="flex-sm-fill text-sm-center nav-link" [class.active]="tabselected == 'contact'" (click)="tabselected='contact'" href="#">Contact</a>
+  </nav>
+
+  <div class="container" [ngSwitch]="tabselected">
+    <p *ngSwitchCase="'features'">
+        FUNCIONALIDADES
+    </p>
+    <p *ngSwitchCase="'pricing'">
+       Preços
+    </p>
+    <p *ngSwitchCase="'contact'">
+        Contato
+    </p>
+    <p *ngSwitchDefault>
+        Home
+    </p>
+  </div>

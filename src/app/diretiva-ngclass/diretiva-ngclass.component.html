@@ -1,0 +1,33 @@
+<p>diretiva-ngclass works!</p>
+
+
+<p>Tag button</p>
+<button type="button" class="btn btn-default btn-lg" (click) = "Checkfavorite()">
+    <span class="glyphicon"
+    [class.glyphicon-star] = "favorite"
+    [class.glyphicon-star-empty] = "!favorite"
+     aria-hidden="true"></span> Star
+</button>
+
+
+<br>
+<p>Tag I</p>
+<i 
+    class="glyphicon"
+    [class.glyphicon-star] = "favorite"
+    [class.glyphicon-star-empty] = "!favorite"
+    (click) = "Checkfavorite()"
+    >
+</i>
+
+<br>
+<p>Tag ngclass</p>
+<i 
+    [ngClass]="{
+        'glyphicon': true,
+        'glyphicon-star': favorite,
+        'glyphicon-star-empty': !favorite
+    }"
+    (click) = "Checkfavorite()"
+    >
+</i>

@@ -1,0 +1,21 @@
+<div *ngIf="visible">
+    <h2>Lista de cursos</h2>
+</div>
+
+
+<div *ngIf="!visible">
+    <h2>Não há cursos</h2>
+</div>
+
+
+<div [hidden]="!visible" >
+    <h2>2- Lista de cursos</h2>
+</div>
+
+
+<div [hidden]="visible" >
+    <h2>2- Não há cursos</h2>
+</div>
+
+
+<button (click)="ListCurso()">Lista Cursos</button>
